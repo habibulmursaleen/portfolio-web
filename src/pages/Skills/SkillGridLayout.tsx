@@ -1,0 +1,81 @@
+"use client";
+import { BentoGrid, BentoGridItem } from "@/components/ui/bento-grid";
+import { Cover } from "@/components/ui/cover";
+import { cn } from "@/lib/utils";
+import {
+  IconClipboardCopy,
+  IconFileBroken,
+  IconSignature,
+  IconTableColumn,
+} from "@tabler/icons-react";
+import SkeletonFour from "./SkeletonFour";
+import SkeletonOne from "./SkeletonOne";
+import SkeletonThree from "./SkeletonThree";
+import SkeletonTwo from "./SkeletonTwo";
+
+const skillsComponents = [
+  {
+    title: "Experienced Tech Stacks",
+    description: (
+      <span className="text-sm">Worked in industry standard projects.</span>
+    ),
+    header: <SkeletonOne />,
+    className: "md:col-span-1",
+    icon: <IconClipboardCopy className="h-4 w-4 text-neutral-500" />,
+  },
+  {
+    title: "Backend Development",
+    description: (
+      <span className="text-sm">
+        Working and implementing backend services with Clean Architechture and Domain Driven Design.
+      </span>
+    ),
+    header: <SkeletonTwo />,
+    className: "md:col-span-1",
+    icon: <IconFileBroken className="h-4 w-4 text-neutral-500" />,
+  },
+  {
+    title: "DevOps",
+    description: (
+      <span className="text-sm">
+        Experience with cloud services like Microsft Azure.
+      </span>
+    ),
+    header: <SkeletonThree />,
+    className: "md:col-span-1",
+    icon: <IconSignature className="h-4 w-4 text-neutral-500" />,
+  },
+  {
+    title: "Frontend Development",
+    description: (
+      <span className="text-sm">
+        Developer with a heart for frontend technologies.
+      </span>
+    ),
+    header: <SkeletonFour />,
+    className: "md:col-span-2",
+    icon: <IconTableColumn className="h-4 w-4 text-neutral-500" />,
+  },
+];
+
+const SkillGridLayout=()=> {
+  return (
+    <BentoGrid className="max-w-4xl mx-auto md:auto-rows-[20rem]">
+      <h1 className="text-4xl md:text-4xl lg:text-6xl font-semibold max-w-7xl mx-auto text-center mt-6 relative z-20 py-6 bg-clip-text text-transparent bg-gradient-to-b from-neutral-200 via-neutral-400 to-neutral-600 dark:from-neutral-800 dark:via-white dark:to-white">
+        Want to know what I <br /> <Cover>can do?</Cover>
+      </h1>
+      {skillsComponents.map((skillsComponent, i) => (
+        <BentoGridItem
+          key={i}
+          title={skillsComponent.title}
+          description={skillsComponent.description}
+          header={skillsComponent.header}
+          className={cn("[&>p:text-lg]", skillsComponent.className)}
+          icon={skillsComponent.icon}
+        />
+      ))}
+    </BentoGrid>
+  );
+}
+
+export default SkillGridLayout;
