@@ -5,7 +5,7 @@ import springboot from "@/assets/springboot.png";
 import sqlserver from "@/assets/sqlserver.png";
 import { motion } from "framer-motion";
 import Image from "next/image";
-import { useEffect, useState } from 'react';
+import { useEffect, useState } from "react";
 
 const SkeletonTwo = () => {
   const [maxWidths, setMaxWidths] = useState<number[]>([]);
@@ -70,7 +70,7 @@ const SkeletonTwo = () => {
           key={"skeleton-two-" + i}
           variants={variants}
           style={{
-            maxWidth: maxWidths[i] ? `${maxWidths[i]}%` : '40%', // Use calculated value or fallback to a default
+            maxWidth: maxWidths[i] ? `${maxWidths[i]}%` : "40%", // Use calculated value or fallback to a default
           }}
           className="flex flex-row rounded-full border border-neutral-100 dark:border-white/[0.2] p-3 items-center space-x-2 bg-neutral-100 dark:bg-black w-full h-4"
         >

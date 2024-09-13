@@ -1,12 +1,14 @@
 "use client";
 import { FlipWords } from "@/components/ui/flip-words";
 import { SparklesCore } from "@/components/ui/sparkles";
+import { GoogleAnalytics } from "@next/third-parties/google";
 
 const words = ["Mursaleen", "from Oslo"];
 
 const SparklesPreview = () => {
   return (
     <div className="mt-32 h-[75vh] w-full bg-black flex flex-col items-center justify-center overflow-hidden rounded-md">
+      <GoogleAnalytics gaId="G-RE5M7ZL6T3" />
       <h1 className="md:text-7xl text-3xl lg:text-9xl font-bold text-center text-white relative z-20">
         Hi, I am <FlipWords words={words} />
       </h1>
@@ -32,6 +34,6 @@ const SparklesPreview = () => {
       </div>
     </div>
   );
-}
+};
 
 export default SparklesPreview;

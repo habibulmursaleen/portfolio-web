@@ -1,5 +1,4 @@
 import { useOutsideClick } from "@/hooks/use-outside-click";
-import CloseIcon from "@/pages/Components/CloseIcon";
 import { Card } from "@/types/card";
 import { motion } from "framer-motion";
 import { useRef } from "react";
@@ -23,7 +22,7 @@ const DetailsPopup: React.FC<DetailsPopupProps> = ({
 
   return (
     <div className="fixed inset-0 flex items-center justify-center z-[100] p-4">
-      <motion.button
+      {/* <motion.button
         key={`button-${active?.title}-${id}`}
         layout
         initial={{ opacity: 0 }}
@@ -31,9 +30,10 @@ const DetailsPopup: React.FC<DetailsPopupProps> = ({
         exit={{ opacity: 0, transition: { duration: 0.05 } }}
         className="absolute top-4 right-12 lg:hidden flex items-center justify-center bg-white rounded-full h-8 w-8"
         onClick={() => setActive(null)}
+        onTouchStart={() => setActive(null)}
       >
         <CloseIcon />
-      </motion.button>
+      </motion.button> */}
 
       <motion.div
         layoutId={`card-${active?.title}-${id}`}
@@ -41,7 +41,10 @@ const DetailsPopup: React.FC<DetailsPopupProps> = ({
         className="w-full max-w-[90%] sm:max-w-[80%] md:max-w-[70%] lg:max-w-[60%] xl:max-w-[50%] mb-4 md:mb-10 h-full md:h-fit md:max-h-[90%] bg-white dark:bg-neutral-900 rounded-2xl overflow-hidden"
       >
         <div className="relative p-4">
-          <motion.div layoutId={`image-${active?.title}-${id}`} className="relative overflow-hidden rounded-t-2xl">
+          <motion.div
+            layoutId={`image-${active?.title}-${id}`}
+            className="relative overflow-hidden rounded-t-2xl"
+          >
             <div className="flex justify-center items-center h-60 w-full">
               {active?.cover()}
             </div>
@@ -64,13 +67,13 @@ const DetailsPopup: React.FC<DetailsPopupProps> = ({
             </motion.p>
           </div>
 
-          <div className="relative px-4 pb-4">
+          <div className="relative px-4 pb-8 h-screen sm:h-auto">
             <motion.div
               layout
               initial={{ opacity: 0 }}
               animate={{ opacity: 1 }}
               exit={{ opacity: 0 }}
-              className="text-neutral-600 text-xs md:text-sm lg:text-base h-40 md:h-fit overflow-auto dark:text-neutral-400"
+              className="text-neutral-600 text-xs md:text-sm lg:text-base h-full sm:h-auto overflow-auto dark:text-neutral-400"
             >
               {active?.content()}
             </motion.div>

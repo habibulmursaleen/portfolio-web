@@ -1,11 +1,13 @@
 "use client";
 import osloMap from "@/assets/osloMap.jpg";
 import { PinContainer } from "@/components/ui/3d-pin";
+import { GoogleAnalytics } from "@next/third-parties/google";
 import Image from "next/image";
 
-const Location=()=> {
+const Location = () => {
   return (
     <div className="relative h-[40rem] w-full flex items-center justify-center z-10">
+      <GoogleAnalytics gaId="G-RE5M7ZL6T3" />
       <PinContainer
         title="I am here"
         href="https://no.linkedin.com/in/habibulmursaleen"
@@ -31,6 +33,6 @@ const Location=()=> {
       </PinContainer>
     </div>
   );
-}
+};
 
 export default Location;

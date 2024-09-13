@@ -1,32 +1,29 @@
-import {
-  IconBriefcase,
-  IconLicense,
-  IconSchool
-} from "@tabler/icons-react";
+import { IconBriefcase, IconLicense, IconSchool } from "@tabler/icons-react";
 import ExpandableCardList from "./ExpandableComponents/ExpandableCardList";
 
 const timeline1920cards = [
   {
-    description: "American International University-Bangladesh (AIUB), @Graduate 2019",
+    description:
+      "American International University-Bangladesh (AIUB), @Graduate 2019",
     title: "Bachelor's Degree @Computer Science & Engineering",
     src: () => {
-      return <IconSchool size={32}  />;
+      return <IconSchool size={32} />;
     },
     cover: () => {
-      return <IconSchool size={250}   />;
+      return <IconSchool size={250} />;
     },
     ctaText: "More",
     ctaLink: "https://www.aiub.edu/",
     content: () => {
       return (
-        <div className="max-h-64 overflow-y-auto [scrollbar-width:none]">
+        <div className="max-h-64 sm:h-auto overflow-y-auto [scrollbar-width:none]">
           <div className="mb-4">
             <p>
-              I earned 4-year Bachelor&apos;s program in Computer Science under the
-              Faculty of Science and Technology at AIUB. I was not only gained
-              comprehensive understanding in academics but also deeply involved
-              in extracurricular activities, which led me to achieve these key
-              accomplishments:
+              I earned 4-year Bachelor&apos;s program in Computer Science under
+              the Faculty of Science and Technology at AIUB. I was not only
+              gained comprehensive understanding in academics but also deeply
+              involved in extracurricular activities, which led me to achieve
+              these key accomplishments:
             </p>
           </div>
 
@@ -45,16 +42,16 @@ const timeline1920cards = [
     description: "August 2019 - February 2020 @Internship",
     title: "Intern @a2i Innovation Lab",
     src: () => {
-      return <IconBriefcase size={32}  />;
+      return <IconBriefcase size={32} />;
     },
     cover: () => {
-      return <IconBriefcase size={250}  />;
+      return <IconBriefcase size={250} />;
     },
     ctaText: "More",
     ctaLink: "https://ilab.gov.bd/",
     content: () => {
       return (
-        <div className="max-h-64 overflow-y-auto [scrollbar-width:none]">
+        <div className="max-h-64 sm:h-auto overflow-y-auto [scrollbar-width:none]">
           <div className="mb-4">
             <p>
               Worked as an intern in Research and Development at the Innovation
@@ -87,17 +84,19 @@ const timeline1920cards = [
     description: "Blockchain Based Decentralisation  @ACM Digital Library",
     title: "Bachelor's Thesis & Publication",
     src: () => {
-      return <IconLicense size={32}  />;
+      return <IconLicense size={32} />;
     },
     cover: () => {
-      return <IconLicense size={250}  />;
+      return <IconLicense size={250} />;
     },
     ctaText: "Read",
     ctaLink: "https://dl.acm.org/doi/10.1145/3377049.3377083",
     content: () => {
       return (
-        <div className="max-h-64 overflow-y-auto [scrollbar-width:none]">
-          <p><strong></strong></p>
+        <div className="max-h-64 sm:h-auto overflow-y-auto [scrollbar-width:none]">
+          <p>
+            <strong></strong>
+          </p>
           <p>
             Throughout this paper, we try to describe with blockchain technology
             the decentralization of the internet. A decentralized network that

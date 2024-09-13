@@ -1,10 +1,12 @@
 "use client";
 import { ContainerScroll } from "@/components/ui/container-scroll-animation";
+import { GoogleAnalytics } from "@next/third-parties/google";
 import SkillGridLayout from "./Skills/SkillGridLayout";
 
-const IpadScreen=()=> {
+const IpadScreen = () => {
   return (
     <div className="flex flex-col overflow-hidden">
+      <GoogleAnalytics gaId="G-RE5M7ZL6T3" />
       <ContainerScroll
         titleComponent={
           <>
@@ -21,6 +23,6 @@ const IpadScreen=()=> {
       </ContainerScroll>
     </div>
   );
-}
+};
 
 export default IpadScreen;

@@ -1,7 +1,5 @@
-import {
-  IconBriefcase,
-  IconPackageExport
-} from "@tabler/icons-react";
+import { GoogleAnalytics } from "@next/third-parties/google";
+import { IconBriefcase, IconPackageExport } from "@tabler/icons-react";
 import ExpandableCardList from "./ExpandableComponents/ExpandableCardList";
 
 const Late23Cards = [
@@ -9,16 +7,16 @@ const Late23Cards = [
     description: "June 2023 - August 2023  @Summer Job",
     title: "Developer @BankId BankAxcept Stø ",
     src: () => {
-      return <IconBriefcase size={32}  />;
+      return <IconBriefcase size={32} />;
     },
     cover: () => {
-      return <IconBriefcase size={250}  />;
+      return <IconBriefcase size={250} />;
     },
     ctaText: "More",
     ctaLink: "https://bankid.no/en/identity-check-with-passport",
     content: () => {
       return (
-        <div className="max-h-64 overflow-y-auto [scrollbar-width:none]">
+        <div className="max-h-64 sm:h-auto overflow-y-auto [scrollbar-width:none]">
           <div className="mb-4">
             <p>
               Worked in the ID Check Team. Digital identification service in
@@ -56,18 +54,18 @@ const Late23Cards = [
   },
   {
     description: "September 2023 - October 2023  @Internship",
-    title: "Frontned Developer @VPS Decarbonization ",
+    title: "Frontend Developer @VPS Decarbonization ",
     src: () => {
-      return <IconBriefcase size={32}  />;
+      return <IconBriefcase size={32} />;
     },
     cover: () => {
-      return <IconBriefcase size={250}  />;
+      return <IconBriefcase size={250} />;
     },
     ctaText: "More",
     ctaLink: "https://www.vpsveritas.com/digital-decarbonisation",
     content: () => {
       return (
-        <div className="max-h-64 overflow-y-auto [scrollbar-width:none]">
+        <div className="max-h-64 sm:h-auto overflow-y-auto [scrollbar-width:none]">
           <div className="mb-4">
             <p>
               Worked in Maress - Maritime project, a fleet management system
@@ -97,35 +95,37 @@ const Late23Cards = [
     },
   },
   {
-    description: "NPM Package @Over 900+ downloads",
+    description: "NPM Package @Over 1000+ downloads",
     title: "Open Source Contribution",
     src: () => {
-      return <IconPackageExport size={32}  />;
+      return <IconPackageExport size={32} />;
     },
     cover: () => {
-      return <IconPackageExport size={250}  />;
+      return <IconPackageExport size={250} />;
     },
     ctaText: "More",
-    ctaLink: "https://www.npmjs.com/package/@chowdhury/vite-react-redux-ts-starter",
+    ctaLink:
+      "https://www.npmjs.com/package/@chowdhury/vite-react-redux-ts-starter",
     content: () => {
       return (
-        <div className="max-h-64 overflow-y-auto [scrollbar-width:none]">
+        <div className="max-h-64 sm:h-auto overflow-y-auto [scrollbar-width:none]">
           <p className="mb-5">
-            A minimalistic Vite-based starter template for building React applications with TypeScript. 
-            This starter kit provides a well-configured development environment and includes essential 
-            tools and shadcn/ui libraries for efficiently developing and maintaining your React projects.
-
-            <br /> <br /> 
-
-            Use the following command to create a new project using this package:
+            A minimalistic Vite-based starter template for building React
+            applications with TypeScript. This starter kit provides a
+            well-configured development environment and includes essential tools
+            and shadcn/ui libraries for efficiently developing and maintaining
+            your React projects.
+            <br /> <br />
+            Use the following command to create a new project using this
+            package:
           </p>
-    
+
           <pre className="bg-gray-900   p-4 rounded-md text-sm whitespace-pre-wrap">
             <code>
-              npx @chowdhury/vite-react-redux-ts-starter my-app{'\n'}
-              cd my-app{'\n'}
-              rm rf .git{'\n'}
-              npm install{'\n'}
+              npx @chowdhury/vite-react-redux-ts-starter my-app{"\n"}
+              cd my-app{"\n"}
+              rm rf .git{"\n"}
+              npm install{"\n"}
               npm run dev
             </code>
           </pre>
@@ -138,6 +138,7 @@ const Late23Cards = [
 const Late2023 = () => {
   return (
     <div className="grid grid-cols-1 gap-4">
+      <GoogleAnalytics gaId="G-RE5M7ZL6T3" />
       <ExpandableCardList cards={Late23Cards} />
     </div>
   );

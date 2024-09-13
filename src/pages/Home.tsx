@@ -1,4 +1,5 @@
 import Timeline from "@/components/ui/timeline";
+import { GoogleAnalytics } from "@next/third-parties/google";
 import FloatingDockLayout from "./FloatingDockLayout";
 import FooterBackground from "./Footer/FooterBackground";
 import InfiniteMovingCardsLayout from "./InfiniteMovingCards";
@@ -10,6 +11,7 @@ import SparklesPreview from "./SparklesPreview";
 const Home = () => {
   return (
     <>
+      <GoogleAnalytics gaId="G-RE5M7ZL6T3" />
       <div id="home">
         <InfiniteMovingCardsLayout />
         <SparklesPreview />

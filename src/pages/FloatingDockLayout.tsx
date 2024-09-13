@@ -1,6 +1,7 @@
 "use client";
 import { BackgroundGradient } from "@/components/ui/background-gradient";
 import { FloatingDock } from "@/components/ui/floating-dock";
+import { GoogleAnalytics } from "@next/third-parties/google";
 import {
   IconAddressBook,
   IconBrandGithub,
@@ -65,17 +66,15 @@ const links = [
   },
 ];
 
-const FloatingDockLayout=()=> {
+const FloatingDockLayout = () => {
   return (
     <div className="fixed bottom-0 left-1/2 transform -translate-x-1/2 z-50 mb-10">
+      <GoogleAnalytics gaId="G-RE5M7ZL6T3" />
       <BackgroundGradient>
-        <FloatingDock
-          mobileClassName="translate-y-20" // only for demo, remove for production
-          items={links}
-        />
+        <FloatingDock items={links} />
       </BackgroundGradient>
     </div>
   );
-}
+};
 
 export default FloatingDockLayout;

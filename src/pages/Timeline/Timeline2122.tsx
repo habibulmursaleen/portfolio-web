@@ -1,7 +1,5 @@
 import { HoverEffectSlim } from "@/components/ui/card-hover-effect-slim";
-import {
-  IconBriefcase
-} from "@tabler/icons-react";
+import { IconBriefcase } from "@tabler/icons-react";
 import ExpandableCardList from "./ExpandableComponents/ExpandableCardList";
 
 const timeline2020Jobcard = [
@@ -9,7 +7,7 @@ const timeline2020Jobcard = [
     description: "December 2020 - July 2021 @Full-time (Until moved to Norway)",
     title: "Software Engineer @Nano Information Technology",
     src: () => {
-      return <IconBriefcase size={32}  />;
+      return <IconBriefcase size={32} />;
     },
     cover: () => {
       return <IconBriefcase size={250} />;
@@ -18,12 +16,12 @@ const timeline2020Jobcard = [
     ctaLink: "https://www.nanoit.biz/",
     content: () => {
       return (
-        <div className="max-h-64 overflow-y-auto [scrollbar-width:none]">
+        <div className="max-h-64 sm:h-auto overflow-y-auto [scrollbar-width:none]">
           <div className="mb-4">
             <p>
-              Worked as a Software Engineer in a team of 15 members. Nano IT is a
-              software development company that provides custom software
-              solutions to various clients. 
+              Worked as a Software Engineer in a team of 15 members. Nano IT is
+              a software development company that provides custom software
+              solutions to various clients.
             </p>
           </div>
 

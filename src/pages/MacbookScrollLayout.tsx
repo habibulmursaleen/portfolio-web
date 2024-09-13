@@ -1,11 +1,13 @@
 import marsRover from "@/assets/marsRover.png";
 import { LinkPreview } from "@/components/ui/link-preview";
 import { MacbookScroll } from "@/components/ui/macbook-scroll";
+import { GoogleAnalytics } from "@next/third-parties/google";
 import Badge from "./Components/Badge";
 
-const MacbookScrollLayout=()=> {
+const MacbookScrollLayout = () => {
   return (
     <div className="overflow-hidden dark:bg-black bg-white w-full">
+      <GoogleAnalytics gaId="G-RE5M7ZL6T3" />
       <MacbookScroll
         title={
           <div className="text-neutral-500 dark:text-neutral-400 text-xl md:text-3xl max-w-3xl mx-auto mb-10">
@@ -32,6 +34,6 @@ const MacbookScrollLayout=()=> {
       />
     </div>
   );
-}
+};
 
 export default MacbookScrollLayout;

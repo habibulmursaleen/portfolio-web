@@ -1,3 +1,4 @@
+import { GoogleAnalytics } from "@next/third-parties/google";
 import { Metadata } from "next";
 import { ThemeProvider } from "next-themes"; // Import ThemeProvider
 import localFont from "next/font/local";
@@ -16,34 +17,37 @@ const geistMono = localFont({
 });
 
 export const metadata: Metadata = {
-    title: "Mursaleen | Habibul Mursaleen | S M Habibul Mursaleen Chowdhury | Mursaleen Chowdhury | chowdhurymursaleen | habibulmursaleen | Chowdhury",
-    keywords: [
+  title: "Mursaleen",
+  keywords: [
+    "Mursaleen | Habibul Mursaleen | S M Habibul Mursaleen Chowdhury | Mursaleen Chowdhury | chowdhurymursaleen | habibulmursaleen | Chowdhury",
+    "Portfolio",
+    "Developer",
+    "Software Engineer",
+    "React",
+    "Next.js",
+    "Tailwind CSS",
+    "TypeScript",
+    "JavaScript",
+    "Node.js",
+    "Express.js",
+    "MongoDB",
+    "GraphQL",
+    "Apollo Client",
+    "REST API",
+  ],
+  description: "Portfolio of Mursaleen",
+  openGraph: {
+    title:
       "Mursaleen | Habibul Mursaleen | S M Habibul Mursaleen Chowdhury | Mursaleen Chowdhury | chowdhurymursaleen | habibulmursaleen | Chowdhury",
-      "Portfolio",
-      "Developer",
-      "Software Engineer",
-      "React",
-      "Next.js",
-      "Tailwind CSS",
-      "TypeScript",
-      "JavaScript",
-      "Node.js",
-      "Express.js",
-      "MongoDB",
-      "GraphQL",
-      "Apollo Client",
-      "REST API",
-    ],
-    description: "Portfolio of Mursaleen",
-    openGraph: {
-      title: "Mursaleen | Habibul Mursaleen | S M Habibul Mursaleen Chowdhury | Mursaleen Chowdhury | chowdhurymursaleen | habibulmursaleen | Chowdhury",
-      description:
-        "Explore the projects and work of Mursaleen (Mursaleen | Habibul Mursaleen | S M Habibul Mursaleen Chowdhury | Mursaleen Chowdhury | chowdhurymursaleen | habibulmursaleen | Chowdhury), a software engineer and developer.",
-      type: "website",
-      url: "https://portfolio-mursaleen.netlify.app/",
-      siteName: "portfolio-mursaleen",
-    },
-  };
+    description:
+      "Explore the projects and work of Mursaleen (Mursaleen | Habibul Mursaleen | S M Habibul Mursaleen Chowdhury | Mursaleen Chowdhury | chowdhurymursaleen | habibulmursaleen | Chowdhury), a software engineer and developer.",
+    type: "website",
+    url: "https://portfolio-mursaleen.netlify.app/",
+    siteName: "portfolio-mursaleen",
+  },
+};
+
+// ReactGA.initialize("G-RE5M7ZL6T3");
 
 export default function RootLayout({
   children,
@@ -53,6 +57,22 @@ export default function RootLayout({
   return (
     <html lang="en">
       <Head>
+        {/* <script
+          async
+          src="https://www.googletagmanager.com/gtag/js?id=G-RE5M7ZL6T3"
+        />
+        <script
+          dangerouslySetInnerHTML={{
+            __html: `
+            window.dataLayer = window.dataLayer || [];
+            function gtag(){dataLayer.push(arguments);}
+            gtag('js', new Date());
+            gtag('config', 'G-RE5M7ZL6T3', {
+              page_path: window.location.pathname,
+            });
+          `,
+          }}
+        /> */}
         <script
           type="application/ld+json"
           dangerouslySetInnerHTML={{
@@ -82,6 +102,7 @@ export default function RootLayout({
           {children}
         </ThemeProvider>
       </body>
+      <GoogleAnalytics gaId="G-RE5M7ZL6T3" />
     </html>
   );
 }
