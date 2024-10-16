@@ -2,11 +2,11 @@ import Image, { StaticImageData } from "next/image";
 
 const ProjectImage = ({ src }: { src: string | StaticImageData }) => {
   return (
-    <div className="mt-5 relative w-full h-0 pb-[56.25%] rounded-2xl overflow-hidden">
+    <div className="relative flex h-auto w-auto flex-col items-center justify-center overflow-hidden rounded-lg bg-background md:shadow-xl">
       <Image
         src={src}
         alt="Project Image"
-        fill
+        layout="responsive"
         className="object-cover object-center"
       />
     </div>

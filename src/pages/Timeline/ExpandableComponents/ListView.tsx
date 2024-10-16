@@ -18,7 +18,7 @@ const ListView: React.FC<ListViewProps> = ({ card, setActive, id }) => {
     <motion.div
       layoutId={`card-${card.title}-${id}`}
       onClick={() => setActive(card)}
-      className="p-4 flex flex-col md:flex-row justify-between items-center hover:bg-neutral-50 dark:hover:bg-slate-800/[0.8] rounded-xl cursor-pointer"
+      className="p-4 flex flex-col md:flex-row justify-between items-center hover:bg-neutral-500 dark:hover:bg-zinc-800/[0.8] rounded-xl cursor-pointer"
     >
       <div className="flex gap-4 flex-col md:flex-row">
         <motion.div layoutId={`image-${card.title}-${id}`}>

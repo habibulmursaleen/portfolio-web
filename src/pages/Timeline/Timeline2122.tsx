@@ -50,7 +50,6 @@ const timeline2122Content = [
     title: "Moved to Norway",
     description:
       "In August 2021, I moved to Kongsberg, Norway to pursue my masters degree.",
-    link: "https://www.google.com/search?q=norway&sourceid=chrome&ie=UTF-8",
   },
   {
     title: "Master's Degree",

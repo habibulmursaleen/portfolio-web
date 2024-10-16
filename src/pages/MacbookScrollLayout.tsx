@@ -10,7 +10,7 @@ const MacbookScrollLayout = () => {
       <GoogleAnalytics gaId="G-RE5M7ZL6T3" />
       <MacbookScroll
         title={
-          <div className="text-neutral-500 dark:text-neutral-400 text-xl md:text-3xl max-w-3xl mx-auto mb-10">
+          <div className="text-neutral-500 dark:text-neutral-400 text-xl md:text-3xl max-w-3xl mx-auto mt-32 mb-10">
             I built a{" "}
             <LinkPreview
               url="https://youtu.be/1A1IkjZbMoo?si=e7YXLbXilHB7GVs5"

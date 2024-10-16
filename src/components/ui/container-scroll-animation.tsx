@@ -74,19 +74,21 @@ export const Header = ({ translate, titleComponent }: HeaderProps) => {
 
 export const Card = ({
   rotate,
+  disable,
   scale,
   children,
 }: {
-  rotate: MotionValue<number>;
-  scale: MotionValue<number>;
-  translate: MotionValue<number>;
+  rotate?: MotionValue<number>;
+  scale?: MotionValue<number>;
+  disable?: boolean;
+  translate?: MotionValue<number>;
   children: React.ReactNode;
 }) => {
   return (
     <motion.div
       style={{
-        rotateX: rotate,
-        scale,
+        rotateX: disable ? 0 : rotate,
+        scale: disable ? 1 : scale,
         boxShadow:
           "0 0 0px #4169e080, 0 9px 20px #4169e080, 0 0px 0px #1abc9c1a, 0 84px 50px #1abc9c0d, 0 0px 60px #1abc9c05, 0 0px 0px #1abc9c01",
       }}

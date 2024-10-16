@@ -1,6 +1,5 @@
 "use client";
 import { BentoGrid, BentoGridItem } from "@/components/ui/bento-grid";
-import { Cover } from "@/components/ui/cover";
 import { cn } from "@/lib/utils";
 import { GoogleAnalytics } from "@next/third-parties/google";
 import {
@@ -9,6 +8,7 @@ import {
   IconSignature,
   IconTableColumn,
 } from "@tabler/icons-react";
+import SkillCloud from "../SkillCloud";
 import SkeletonFour from "./SkeletonFour";
 import SkeletonOne from "./SkeletonOne";
 import SkeletonThree from "./SkeletonThree";
@@ -64,9 +64,7 @@ const SkillGridLayout = () => {
   return (
     <BentoGrid className="max-w-4xl mx-auto md:auto-rows-[20rem]">
       <GoogleAnalytics gaId="G-RE5M7ZL6T3" />
-      <h1 className="text-4xl md:text-4xl lg:text-6xl font-semibold max-w-7xl mx-auto text-center mt-6 relative z-20 py-6 bg-clip-text text-transparent bg-gradient-to-b from-neutral-200 via-neutral-400 to-neutral-600 dark:from-neutral-800 dark:via-white dark:to-white">
-        Want to know what I <br /> <Cover>can do?</Cover>
-      </h1>
+      <SkillCloud />
       {skillsComponents.map((skillsComponent, i) => (
         <BentoGridItem
           key={i}

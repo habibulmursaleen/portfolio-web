@@ -38,7 +38,7 @@ const DetailsPopup: React.FC<DetailsPopupProps> = ({
       <motion.div
         layoutId={`card-${active?.title}-${id}`}
         ref={ref}
-        className="w-full max-w-[90%] sm:max-w-[80%] md:max-w-[70%] lg:max-w-[60%] xl:max-w-[50%] mb-4 md:mb-10 h-full md:h-fit md:max-h-[90%] bg-white dark:bg-neutral-900 rounded-2xl overflow-hidden"
+        className="w-full max-w-[90%] sm:max-w-[80%] md:max-w-[70%] lg:max-w-[60%] xl:max-w-[50%] mb-4 md:mb-10 h-full md:h-fit md:max-h-[90%] bg-white dark:bg-neutral-800 rounded-2xl overflow-hidden"
       >
         <div className="relative p-4">
           <motion.div
