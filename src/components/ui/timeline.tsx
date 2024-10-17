@@ -61,8 +61,9 @@ const Timeline = () => {
             Last 5 years in a nutshell!
           </h1>
           <div className="text-neutral-700 dark:text-neutral-300 text-sm md:text-base max-w-lg mt-10">
-            I&apos;d been living in Dhaka, Bangladesh for all my life until I decided to explore more outside the country.
-            Here&apos;s a overview of what I&apos;ve been doing on my journey from Dhaka to Oslo.
+            I&apos;d been living in Dhaka, Bangladesh for all my life until I
+            decided to explore more outside the country. Here&apos;s a overview
+            of what I&apos;ve been doing on my journey from Dhaka to Oslo.
           </div>
         </div>
 

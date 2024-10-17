@@ -10,11 +10,15 @@ interface ExpandableCardListProps {
   cards: Card[];
 }
 
-const ExpandableCardList: React.FC<ExpandableCardListProps> = ({ cards = [] }) => {
-  const [active, setActive] = useState<(typeof cards)[number] | boolean | null>(null);
+const ExpandableCardList: React.FC<ExpandableCardListProps> = ({
+  cards = [],
+}) => {
+  const [active, setActive] = useState<(typeof cards)[number] | boolean | null>(
+    null
+  );
   const ref = useRef<HTMLDivElement>(null);
   const id = useId();
-  
+
   useEffect(() => {
     function onKeyDown(event: KeyboardEvent) {
       if (event.key === "Escape") {
@@ -22,7 +26,8 @@ const ExpandableCardList: React.FC<ExpandableCardListProps> = ({ cards = [] }) =
       }
     }
 
-    document.body.style.overflow = active && typeof active === "object" ? "hidden" : "auto";
+    document.body.style.overflow =
+      active && typeof active === "object" ? "hidden" : "auto";
 
     window.addEventListener("keydown", onKeyDown);
     return () => window.removeEventListener("keydown", onKeyDown);
@@ -60,6 +65,5 @@ const ExpandableCardList: React.FC<ExpandableCardListProps> = ({ cards = [] }) =
     </>
   );
 };
-
 
 export default ExpandableCardList;

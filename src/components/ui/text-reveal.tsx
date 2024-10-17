@@ -24,9 +24,7 @@ export const TextRevealByWord: FC<TextRevealByWordProps> = ({
   return (
     <div ref={targetRef} className={cn("relative z-0 h-full", className)}>
       <div
-        className={
-          "sticky top-0 mx-auto flex h-full max-w-4xl  bg-transparent"
-        }
+        className={"sticky top-0 mx-auto flex h-full max-w-4xl  bg-transparent"}
       >
         <p
           ref={targetRef}
@@ -35,8 +33,9 @@ export const TextRevealByWord: FC<TextRevealByWordProps> = ({
           }
         >
           {words.map((word, i) => {
-            const start = i / words.length;
+            const start = (words.length - i) / words.length;
             const end = start + 1 / words.length;
+
             return (
               <Word key={i} progress={scrollYProgress} range={[start, end]}>
                 {word}
@@ -59,7 +58,7 @@ const Word: FC<WordProps> = ({ children, progress, range }) => {
   const opacity = useTransform(
     progress,
     range,
-    [0, 1],
+    [1, 0],
     { clamp: true } // Ensure that the value doesn't go below 0 or above 1
   );
   return (
@@ -74,6 +73,5 @@ const Word: FC<WordProps> = ({ children, progress, range }) => {
     </span>
   );
 };
-
 
 export default TextRevealByWord;

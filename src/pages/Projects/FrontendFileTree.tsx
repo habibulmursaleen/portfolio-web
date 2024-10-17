@@ -1,7 +1,6 @@
 import { File, Folder, Tree } from "@/components/ui/file-tree";
 
- 
-export default  function FrontendFileTree() {
+export default function FrontendFileTree() {
   return (
     <div className="relative flex h-[300px] flex-col items-center justify-center overflow-hidden rounded-lg bg-background md:shadow-xl">
       <Tree
@@ -34,12 +33,12 @@ export default  function FrontendFileTree() {
           "24",
           "25",
           "26",
-          "27"
+          "27",
         ]}
         elements={ELEMENTS}
       >
         <Folder element="src" value="1">
-        <Folder value="28" element="__tests__">
+          <Folder value="28" element="__tests__">
             <File value="29">
               <p>testExample.ts</p>
             </File>
@@ -93,7 +92,7 @@ export default  function FrontendFileTree() {
             </File>
           </Folder>
           <Folder value="21" element="pages">
-          <Folder value="22" element="Home">
+            <Folder value="22" element="Home">
               <File value="23">
                 <p>Home.tsx</p>
               </File>
@@ -109,7 +108,6 @@ export default  function FrontendFileTree() {
               <p>utils.ts</p>
             </File>
           </Folder>
-          
         </Folder>
       </Tree>
     </div>

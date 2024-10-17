@@ -10,12 +10,11 @@ const IpadScreen = () => {
       <ContainerScroll
         titleComponent={
           <>
-           
             <h1 className="text-4xl font-semibold text-black dark:text-white">
               <span className="text-3xl md:text-[6rem] font-bold mt-1 leading-none">
-                What am I good at? 
+                What am I good at?
               </span>
-            </h1>          
+            </h1>
           </>
         }
       >

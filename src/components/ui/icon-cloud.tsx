@@ -52,7 +52,8 @@ export const renderCustomIcon = (icon: SimpleIcon, theme: string) => {
       href: undefined,
       target: undefined,
       rel: undefined,
-      onClick: (e: React.MouseEvent<HTMLAnchorElement, MouseEvent>) => e.preventDefault(),
+      onClick: (e: React.MouseEvent<HTMLAnchorElement, MouseEvent>) =>
+        e.preventDefault(),
     },
   });
 };
@@ -75,7 +76,7 @@ export default function IconCloud({ iconSlugs }: DynamicCloudProps) {
     if (!data) return null;
 
     return Object.values(data.simpleIcons).map((icon) =>
-      renderCustomIcon(icon, theme || "light"),
+      renderCustomIcon(icon, theme || "light")
     );
   }, [data, theme]);
 

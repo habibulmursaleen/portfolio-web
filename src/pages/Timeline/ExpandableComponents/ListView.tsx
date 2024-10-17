@@ -12,7 +12,7 @@ interface ListViewProps {
 }
 
 const ListView: React.FC<ListViewProps> = ({ card, setActive, id }) => {
-  if (!card) return null;  
+  if (!card) return null;
 
   return (
     <motion.div
@@ -24,7 +24,7 @@ const ListView: React.FC<ListViewProps> = ({ card, setActive, id }) => {
         <motion.div layoutId={`image-${card.title}-${id}`}>
           <div className="flex items-center justify-center h-full w-full">
             <div className="flex items-center justify-center">
-              {card.src ? card.src() : null}  
+              {card.src ? card.src() : null}
             </div>
           </div>
         </motion.div>
@@ -47,9 +47,7 @@ const ListView: React.FC<ListViewProps> = ({ card, setActive, id }) => {
         layoutId={`button-${card.title}-${id}`}
         className="px-4 py-2 text-sm rounded-full font-bold bg-gray-100 text-black mt-4 md:mt-0"
       >
-        <Link href={card.ctaLink || "#"}>
-          {card.ctaText}
-        </Link>
+        <Link href={card.ctaLink || "#"}>{card.ctaText}</Link>
       </motion.button>
     </motion.div>
   );

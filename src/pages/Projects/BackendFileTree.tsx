@@ -1,6 +1,5 @@
 import { File, Folder, Tree } from "@/components/ui/file-tree";
 
- 
 export default function BackendFileTree() {
   return (
     <div className="relative flex h-[300px] flex-col items-center justify-center overflow-hidden rounded-lg bg-background md:shadow-xl">
@@ -39,78 +38,75 @@ export default function BackendFileTree() {
           "29",
           "30",
         ]}
-       >
+      >
         <Folder value="1" element="tests">
-            <File value="2">
-              <p>testExample.ts</p>
-            </File>
-          </Folder>
+          <File value="2">
+            <p>testExample.ts</p>
+          </File>
+        </Folder>
         <Folder element="src" value="3">
           <Folder element="API" value="4">
-          <Folder value="5" element="Controllers">
-            <File value="6">
-              <p>ProjectsController.cs</p>
-            </File>
-          </Folder>
-          <Folder value="7" element="DTOs">
-            <File value="8">
-              <p>ProjectDto.cs</p>
-            </File>
-            <File value="9">
-              <p>CreateProjectDto.cs</p>
-            </File>
-          </Folder>
-        </Folder>
-        <Folder element="Application" value="10">
-          <Folder value="11" element="Interfaces">
-            <File value="12">
-              <p>IOrderService.cs</p>
-            </File>
-            <File value="13">
-              <p>IOrderRepository.cs</p>
-            </File>
-          </Folder>
-          <Folder value="14" element="Services">
-            <Folder value="15" element="Queries">
-              <File value="16">
-                <p>ProjectService.cs</p>
+            <Folder value="5" element="Controllers">
+              <File value="6">
+                <p>ProjectsController.cs</p>
               </File>
             </Folder>
-            <Folder value="17" element="Commands">
-              <File value="18">
-                <p>ProjectService.cs</p>
+            <Folder value="7" element="DTOs">
+              <File value="8">
+                <p>ProjectDto.cs</p>
+              </File>
+              <File value="9">
+                <p>CreateProjectDto.cs</p>
               </File>
             </Folder>
           </Folder>
-        </Folder>
-
-        <Folder element="Domain" value="19">
-          <Folder value="20" element="Entities">
-            <File value="21">
-              <p>Project.cs</p>
-            </File>
+          <Folder element="Application" value="10">
+            <Folder value="11" element="Interfaces">
+              <File value="12">
+                <p>IOrderService.cs</p>
+              </File>
+              <File value="13">
+                <p>IOrderRepository.cs</p>
+              </File>
+            </Folder>
+            <Folder value="14" element="Services">
+              <Folder value="15" element="Queries">
+                <File value="16">
+                  <p>ProjectService.cs</p>
+                </File>
+              </Folder>
+              <Folder value="17" element="Commands">
+                <File value="18">
+                  <p>ProjectService.cs</p>
+                </File>
+              </Folder>
+            </Folder>
           </Folder>
-          <Folder value="22" element="Enums"></Folder>
-          <Folder value="23" element="ValueObjects"></Folder>
-          <Folder value="24" element="Events"></Folder>
-        </Folder>
 
-        <Folder element="Infrastructure" value="25">
-          <Folder value="26" element="Repositories">
-            <File value="27">
-              <p>ProjectRepository.cs</p>
-            </File>
+          <Folder element="Domain" value="19">
+            <Folder value="20" element="Entities">
+              <File value="21">
+                <p>Project.cs</p>
+              </File>
+            </Folder>
+            <Folder value="22" element="Enums"></Folder>
+            <Folder value="23" element="ValueObjects"></Folder>
+            <Folder value="24" element="Events"></Folder>
           </Folder>
-          <Folder value="27" element="DataContext"></Folder>
-          <Folder value="29" element="Services">
-            <File value="30">
-              <p>ProjectService.cs</p>
-            </File>
-          </Folder>
-        </Folder>
 
-        
-          
+          <Folder element="Infrastructure" value="25">
+            <Folder value="26" element="Repositories">
+              <File value="27">
+                <p>ProjectRepository.cs</p>
+              </File>
+            </Folder>
+            <Folder value="27" element="DataContext"></Folder>
+            <Folder value="29" element="Services">
+              <File value="30">
+                <p>ProjectService.cs</p>
+              </File>
+            </Folder>
+          </Folder>
         </Folder>
       </Tree>
     </div>
