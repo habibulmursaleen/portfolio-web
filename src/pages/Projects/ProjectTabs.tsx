@@ -17,9 +17,8 @@ const tabs = [
     content: (
       <Card disable>
         <GoogleAnalytics gaId="G-RE5M7ZL6T3" />
-          <NorskApi/>
+        <NorskApi />
       </Card>
-
     ),
   },
   {
@@ -28,7 +27,7 @@ const tabs = [
     content: (
       <Card disable>
         <GoogleAnalytics gaId="G-RE5M7ZL6T3" />
-          <EcommercePortal/>
+        <EcommercePortal />
       </Card>
     ),
   },
@@ -38,7 +37,7 @@ const tabs = [
     content: (
       <Card disable>
         <GoogleAnalytics gaId="G-RE5M7ZL6T3" />
-          <BookStore/>
+        <BookStore />
       </Card>
     ),
   },
@@ -47,16 +46,13 @@ const tabs = [
     value: "StudentPortal",
     content: (
       <div className="w-full relative rounded-2xl p-10 text-xl md:text-4xl font-bold text-white bg-black drop-shadow-2xl overflow-y-visible">
-         <Card disable>
-        <GoogleAnalytics gaId="G-RE5M7ZL6T3" />
-          <StudentPortal/>
-      </Card>
-        
-       </div>
-      
+        <Card disable>
+          <GoogleAnalytics gaId="G-RE5M7ZL6T3" />
+          <StudentPortal />
+        </Card>
+      </div>
     ),
-  }
-  
+  },
 ];
 
 const ProjectTabs = () => {
@@ -65,7 +61,10 @@ const ProjectTabs = () => {
       <GoogleAnalytics gaId="G-RE5M7ZL6T3" />
       <div className="max-w-7xl mx-auto py-10 px-4 md:px-8 lg:px-10">
         <h1 className="text-6xl md:text-6xl lg:text-6xl font-semibold max-w-7xl mx-auto text-center  relative py-6 bg-clip-text text-transparent bg-gradient-to-b from-neutral-800 via-neutral-800 to-neutral-300 dark:from-neutral-200 dark:via-white dark:to-white z-20">
-          <TextReveal className='text-6xl md:text-6xl lg:text-6xl' text="Wondering what I have been working on!" /> 
+          <TextReveal
+            className="text-6xl md:text-6xl lg:text-6xl"
+            text="Wondering what I have been working on!"
+          />
         </h1>
         <div className="text-neutral-700 dark:text-neutral-300 text-sm md:text-base max-w-lg mt-10">
           There are over{" "}
@@ -86,7 +85,7 @@ const ProjectTabs = () => {
           page for details.
         </div>
       </div>
-       <div className="h-[20rem] md:h-[40rem] [perspective:1000px] relative b flex flex-col max-w-5xl mx-auto w-full  items-start justify-start my-10">
+      <div className="h-[20rem] md:h-[40rem] [perspective:1000px] relative b flex flex-col max-w-5xl mx-auto w-full  items-start justify-start my-10">
         <Tabs tabs={tabs} />
       </div>
     </>

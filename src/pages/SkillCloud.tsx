@@ -1,7 +1,7 @@
 import IconCloud from "@/components/ui/icon-cloud";
 
 const slugs = [
- "typescript",
+  "typescript",
   "javascript",
   "java",
   "react",
@@ -24,6 +24,7 @@ const slugs = [
   "github",
   "visualstudiocode",
   "figma",
+  "postman",
   "springboot",
   "csharp",
   "dotnet",
@@ -34,18 +35,18 @@ const slugs = [
   "python",
   "microsoftazure",
   "mongodb",
-  'chai',
-  'mocha',
-  'chakraui',
-  'mui',
+  "chai",
+  "mocha",
+  "chakraui",
+  "mui",
 ];
 
-const SkillCloud=()=> {
+const SkillCloud = () => {
   return (
     <div className="relative flex size-full max-w-lg items-center justify-center overflow-hidden rounded-lg border bg-background px-4 pb-2">
       <IconCloud iconSlugs={slugs} />
     </div>
   );
-}
+};
 
 export default SkillCloud;

@@ -1,4 +1,5 @@
 "use client";
+import { BackgroundBeams } from "@/components/ui/background-beams";
 import { LinkPreview } from "@/components/ui/link-preview";
 import { useState } from "react";
 import Location from "./Location";
@@ -36,7 +37,7 @@ const FooterBackground = () => {
       <p className="text-neutral-500 text-sm text-center lg:text-right md:text-right mr-4 md:mr-10">
         ©2024 Mursaleen. All rights reserved.
       </p>
-      {/* <BackgroundBeams /> */}
+      <BackgroundBeams />
     </div>
   );
 };

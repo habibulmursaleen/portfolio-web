@@ -5,7 +5,7 @@ import application from "@/assets/application.png";
 import domain from "@/assets/domain.png";
 import infrastructure from "@/assets/infrastructure.png";
 
-import { Database } from 'lucide-react';
+import { Database } from "lucide-react";
 
 import React, { forwardRef, useRef } from "react";
 
@@ -22,7 +22,7 @@ const Circle = forwardRef<
       ref={ref}
       className={cn(
         "z-10 flex size-12 items-center justify-center rounded-full border-2 border-border bg-white shadow-[0_0_20px_-12px_rgba(0,0,0,0.8)]",
-        className,
+        className
       )}
     >
       {children}
@@ -43,49 +43,47 @@ export default function NorskApiDataflow({
   const domainLayer = useRef<HTMLDivElement>(null);
   const applicationLayer = useRef<HTMLDivElement>(null);
   const apiLayer = useRef<HTMLDivElement>(null);
-   const user = useRef<HTMLDivElement>(null);
+  const user = useRef<HTMLDivElement>(null);
 
   return (
     <div
       className={cn(
         "relative flex h-[300px] w-full items-center justify-center overflow-hidden rounded-lg bg-background p-10 md:shadow-xl",
-        className,
+        className
       )}
       ref={containerRef}
     >
       <div className="flex w-full max-w-lg flex-row justify-around items-center gap-10">
- 
-  <div className="flex flex-col justify-center gap-8">
-  <Circle ref={database} className="size-16">
-      <Database className="text-black" />
-    </Circle>
-    <Circle ref={infrastructureLayer} className="size-16">
-      <ProjectImage src={infrastructure}/>
-    </Circle>
-  </div>
-   
-  <div className="flex justify-center">
-  <Circle ref={domainLayer} className="size-16">
-      <ProjectImage src={domain}/>
-    </Circle>
-  </div>
-  <div className="flex justify-center">
-  <Circle ref={applicationLayer} className="size-16">
-      <ProjectImage src={application}/>
-    </Circle>
-  </div>
-  <div className="flex flex-col justify-center">
-     
-    <Circle ref={apiLayer} className="size-16">
-      <ProjectImage src={api}/>
-    </Circle>
-  </div>
-  <div className="flex justify-center">
-    <Circle ref={user} className="size-16">
-      <Icons.user />
-    </Circle>
-  </div>
-</div>
+        <div className="flex flex-col justify-center gap-8">
+          <Circle ref={database} className="size-16">
+            <Database className="text-black" />
+          </Circle>
+          <Circle ref={infrastructureLayer} className="size-16">
+            <ProjectImage src={infrastructure} />
+          </Circle>
+        </div>
+
+        <div className="flex justify-center">
+          <Circle ref={domainLayer} className="size-16">
+            <ProjectImage src={domain} />
+          </Circle>
+        </div>
+        <div className="flex justify-center">
+          <Circle ref={applicationLayer} className="size-16">
+            <ProjectImage src={application} />
+          </Circle>
+        </div>
+        <div className="flex flex-col justify-center">
+          <Circle ref={apiLayer} className="size-16">
+            <ProjectImage src={api} />
+          </Circle>
+        </div>
+        <div className="flex justify-center">
+          <Circle ref={user} className="size-16">
+            <Icons.user />
+          </Circle>
+        </div>
+      </div>
 
       <AnimatedBeam
         containerRef={containerRef}
@@ -93,13 +91,13 @@ export default function NorskApiDataflow({
         toRef={infrastructureLayer}
       />
 
-<AnimatedBeam
+      <AnimatedBeam
         containerRef={containerRef}
         fromRef={infrastructureLayer}
         toRef={domainLayer}
       />
 
-<AnimatedBeam
+      <AnimatedBeam
         containerRef={containerRef}
         fromRef={domainLayer}
         toRef={applicationLayer}
@@ -109,13 +107,12 @@ export default function NorskApiDataflow({
         fromRef={applicationLayer}
         toRef={apiLayer}
       />
-    
+
       <AnimatedBeam
         containerRef={containerRef}
         fromRef={apiLayer}
         toRef={user}
       />
-      
     </div>
   );
 }

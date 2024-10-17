@@ -1,5 +1,5 @@
 import OrbitingCircles from "@/components/ui/orbiting-circles";
- 
+
 export default function CleanArchitecture() {
   return (
     <div className="relative flex h-[350px] w-full flex-col items-center justify-center overflow-hidden rounded-lg bg-background md:shadow-xl">
@@ -21,7 +21,6 @@ export default function CleanArchitecture() {
         duration={20}
         delay={10}
         radius={70}
-         
       >
         Application
       </OrbitingCircles>
@@ -44,11 +43,6 @@ export default function CleanArchitecture() {
       >
         Infrastructure
       </OrbitingCircles>
-
-     
-      
     </div>
   );
 }
-
-
