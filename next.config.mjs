@@ -16,6 +16,7 @@ const nextConfig = {
       "cdn.sanity.io",
       "www.openscience.no",
       "www.bssnews.net",
+      "cdn.iconscout.com"
     ],
   },
 };

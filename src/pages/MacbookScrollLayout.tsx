@@ -10,7 +10,7 @@ const MacbookScrollLayout = () => {
       <GoogleAnalytics gaId="G-RE5M7ZL6T3" />
       <MacbookScroll
         title={
-          <div className="text-neutral-500 dark:text-neutral-400 text-xl md:text-3xl max-w-3xl mx-auto mt-32 mb-10">
+            <div className="text-neutral-500 dark:text-neutral-400 text-5xl md:text-3xl sm:text-2xl max-w-3xl mx-auto mt-32 mb-10">
             I built a{" "}
             <LinkPreview
               url="https://youtu.be/1A1IkjZbMoo?si=e7YXLbXilHB7GVs5"
@@ -26,7 +26,7 @@ const MacbookScrollLayout = () => {
               URC 2019
             </LinkPreview>{" "}
             and placed 18th out of 96 teams worldwide.
-          </div>
+            </div>
         }
         badge={<Badge className="h-10 w-10 transform -rotate-12" />}
         src={marsRover}

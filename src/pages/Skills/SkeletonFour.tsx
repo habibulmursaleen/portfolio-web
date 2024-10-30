@@ -7,7 +7,7 @@ const library = [
     name: "React.js",
     designation: "Library",
     image:
-      "https://brandslogos.com/wp-content/uploads/images/large/react-logo-1.png",
+      "https://cdn.iconscout.com/icon/free/png-256/free-react-logo-icon-download-in-svg-png-gif-file-formats--company-brand-world-logos-vol-4-pack-icons-282599.png",
   },
   {
     id: 2,
