@@ -45,12 +45,10 @@ const tabs = [
     title: "Student Portal",
     value: "StudentPortal",
     content: (
-      <div className="w-full relative rounded-2xl p-10 text-xl md:text-4xl font-bold text-white bg-black drop-shadow-2xl overflow-y-visible">
-        <Card disable>
+      <Card disable>
           <GoogleAnalytics gaId="G-RE5M7ZL6T3" />
           <StudentPortal />
         </Card>
-      </div>
     ),
   },
 ];

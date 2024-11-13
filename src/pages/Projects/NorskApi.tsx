@@ -1,4 +1,4 @@
-import norskapi from "@/assets/norskapi.png";
+import norskapiVersion2 from "@/assets/norskapi-version2.png";
 import { BentoGrid, BentoGridItem } from "@/components/ui/bento-grid";
 import {
   IconClipboardCopy,
@@ -6,11 +6,11 @@ import {
   IconSignature,
   IconTableColumn,
 } from "@tabler/icons-react";
+import Image, { StaticImageData } from "next/image";
 
 import BackendFileTree from "./BackendFileTree";
 import CleanArchitecture from "./CleanArchitecture";
 import NorskApiDataflow from "./NorskApiDataflow";
-import ProjectImage from "./ProjectImage";
 
 const NorskApi = () => {
   return (
@@ -31,6 +31,21 @@ const NorskApi = () => {
 };
 
 export default NorskApi;
+
+const NorskApiImage = ({ src }: { src: string | StaticImageData }) => {
+  return (
+    <div className="relative flex h-auto w-full flex-col items-center justify-center overflow-hidden rounded-lg bg-background md:shadow-xl" style={{ aspectRatio: '16/9' }}>
+      <Image
+        src={src}
+        alt="Project Image"
+        layout="fill"
+        objectFit="contain"
+        className="object-center"
+      />
+    </div>
+  );
+};
+
 
 const items = [
   {
@@ -61,8 +76,10 @@ const items = [
     title: "Domain layer",
     description:
       "Understand the business rules and logic that govern the application with Aggregates, Entities, and Value Objects.",
-    header: <ProjectImage src={norskapi} />,
+    header: <NorskApiImage src={norskapiVersion2} />,
     className: "md:col-span-2",
     icon: <IconTableColumn className="h-4 w-4 text-neutral-500" />,
   },
 ];
+
+
