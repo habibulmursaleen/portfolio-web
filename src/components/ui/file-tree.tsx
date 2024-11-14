@@ -1,3 +1,4 @@
+/* eslint-disable @typescript-eslint/no-empty-interface */
 "use client";
 
 import * as AccordionPrimitive from "@radix-ui/react-accordion";
@@ -44,7 +45,11 @@ const useTree = () => {
   return context;
 };
 
-interface TreeViewComponentProps extends React.HTMLAttributes<HTMLDivElement> {}
+/* eslint-disable @typescript-eslint/no-empty-interface */
+interface TreeViewComponentProps extends React.HTMLAttributes<HTMLDivElement> {
+  // Optional property `customClassName`
+  customClassName?: string;
+}
 
 type Direction = "rtl" | "ltr" | undefined;
 
@@ -201,9 +206,12 @@ const TreeIndicator = forwardRef<
 
 TreeIndicator.displayName = "TreeIndicator";
 
+/* eslint-disable @typescript-eslint/no-empty-interface */
 interface FolderComponentProps
-  extends React.ComponentPropsWithoutRef<typeof AccordionPrimitive.Item> {}
-
+  extends React.ComponentPropsWithoutRef<typeof AccordionPrimitive.Item> {
+  // Optional property `customClassName`
+  customClassName?: string;
+}
 type FolderProps = {
   expandedItems?: string[];
   element: string;
