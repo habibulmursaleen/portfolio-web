@@ -9,6 +9,7 @@ import BookStore from "./BookStore";
 import EcommercePortal from "./EcommercePortal";
 import NorskApi from "./NorskApi";
 import StudentPortal from "./StudentPortal";
+import Win95Portfolio from "./Win95Portfolio";
 
 const tabs = [
   {
@@ -48,6 +49,16 @@ const tabs = [
       <Card disable>
           <GoogleAnalytics gaId="G-RE5M7ZL6T3" />
           <StudentPortal />
+        </Card>
+    ),
+  },
+  {
+    title: "Windows 95 Portfolio",
+    value: "windows95Porfolio",
+    content: (
+      <Card disable>
+          <GoogleAnalytics gaId="G-RE5M7ZL6T3" />
+          <Win95Portfolio />
         </Card>
     ),
   },
